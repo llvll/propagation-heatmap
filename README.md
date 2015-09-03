@@ -12,3 +12,5 @@ Initial implementation used the masked arrays and "pcolormesh" function, but swi
 
 At this stage the heatmap doesn't consider the penetration of obstacles, like walls,
 and their impact on signal strength and propagation.
+
+IPython Notebook (.ipynb file) is included for step-by-step execution of the demo application with extra comments.
