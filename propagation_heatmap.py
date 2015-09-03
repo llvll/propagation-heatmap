@@ -56,12 +56,12 @@ image = im.imread("data/floor_plan1.png")
 image_w = image.shape[1]
 image_h = image.shape[0]
 
-plt.figure(figsize=(image_w/80, image_h/80), dpi=80)
 wh_ratio = image_w/image_h
 
+plt.figure(figsize=(image_w/80, image_h/80), dpi=80)
 plt.imshow(image, origin='upper', extent=[x_data.min()*2*wh_ratio, x_data.max()*2*wh_ratio,
                                           y_data.min()*2, y_data.max()*2])
-
+                                          
 # Setting the transparency values for a smooth gradient
 cmap = plt.get_cmap('Paired')
 cmap._init()
