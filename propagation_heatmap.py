@@ -26,17 +26,13 @@
 """
 Demo for plotting RF propagation heatmap using the two-dimensional signal strength data
 of 2.4 GHz Wi-Fi antenna.
-
 The data is supplied in three CSV files: X coordinates, Y coordinates and Signal Strength in dBm.
-
 The heatmap is drawn using Matplotlib and specific "adjustments" for transparency levels of
 the color map to get a smooth gradient.
-
 Initial implementation used the masked arrays and "pcolormesh" function, but switched to "contourf"
 without the masked arrays, taking into account the issue with interpolation for masked arrays in Matplotlib.
-
-At this stage the heatmap doesn't consider the penetration of obstacles, like walls, 
-and their impact on signal strength and propagation. 
+At this stage the heatmap doesn't consider the penetration of obstacles, like walls,
+and their impact on signal strength and propagation.
 """
 
 from matplotlib import pyplot as plt
@@ -59,7 +55,10 @@ y_data = np.genfromtxt("data/Y-table.csv", delimiter=',')
 image = im.imread("data/floor_plan1.png")
 image_w = image.shape[1]
 image_h = image.shape[0]
+
+plt.figure(figsize=(image_w/80, image_h/80), dpi=80)
 wh_ratio = image_w/image_h
+
 plt.imshow(image, origin='upper', extent=[x_data.min()*2*wh_ratio, x_data.max()*2*wh_ratio,
                                           y_data.min()*2, y_data.max()*2])
 
@@ -83,7 +82,7 @@ labels = sorted([t.get_text() for t in cb.ax.get_yticklabels()])
 
 # Drawing the labels along the contour levels
 for l in labels:
-    plt.text(label_pos, 0, l, fontsize=7)
+    plt.text(label_pos, 0, l, fontsize=6)
     label_pos -= label_step
     label_step += 0.4
 
