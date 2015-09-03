@@ -1,7 +1,7 @@
 # RF Propagation Heatmap
 ### *Demo for plotting RF propagation heatmap using the two-dimensional signal strength data of 2.4 GHz Wi-Fi antenna.*
 
-<img src=“ip[y]/rf_heatmap.png" width=600 height=500/>
+<img src=“/ip[y]/rf_heatmap.png" width=600 height=500/>
 
 The data is supplied in three CSV files: X coordinates, Y coordinates and Signal Strength in dBm.
 
@@ -12,4 +12,3 @@ Initial implementation used the masked arrays and "pcolormesh" function, but swi
 
 At this stage the heatmap doesn't consider the penetration of obstacles, like walls,
 and their impact on signal strength and propagation.
-
