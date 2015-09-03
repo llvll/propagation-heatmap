@@ -34,6 +34,9 @@ the color map to get a smooth gradient.
 
 Initial implementation used the masked arrays and "pcolormesh" function, but switched to "contourf"
 without the masked arrays, taking into account the issue with interpolation for masked arrays in Matplotlib.
+
+At this stage the heatmap doesn't consider the penetration of obstacles, like walls, 
+and their impact on signal strength and propagation. 
 """
 
 from matplotlib import pyplot as plt
