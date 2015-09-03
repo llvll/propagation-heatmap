@@ -1,7 +1,7 @@
 # RF Propagation Heatmap
 ### *Demo for plotting RF propagation heatmap using the two-dimensional signal strength data of 2.4 GHz Wi-Fi antenna.*
 
-<img src=“/ip[y]/rf_heatmap.png" width=600 height=500/>
+![Screenshot](/ip[y]/rf_heatmap.png)
 
 The data is supplied in three CSV files: X coordinates, Y coordinates and Signal Strength in dBm.
 
