@@ -82,7 +82,7 @@ labels = sorted([t.get_text() for t in cb.ax.get_yticklabels()])
 
 # Drawing the labels along the contour levels
 for l in labels:
-    plt.text(label_pos, 0, l, fontsize=6)
+    plt.text(label_pos, 0, l, fontsize=7)
     label_pos -= label_step
     label_step += 0.4
 
